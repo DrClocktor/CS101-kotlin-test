@@ -4,23 +4,30 @@ object Part2ConditionalLogic {
     // ---------------------- EXERCISE 1
     // Create a function that takes an integer as a parameter and returns "Positive", "Negative", or "Zero".
     fun checkNumber(number: Int): String {
-        // Your code here
-        return ""
+        return if(number > 0){
+            "Positive"
+        } else if (number < 0)
+            "Negative"
+        else "Zero"
     }
 
     // ---------------------- EXERCISE 2
     // Create a function that takes a string and prints each character on a new line.
     fun printChars(input: String) {
-        // Your code here
+        val inputSplit = input.split("")
+        for (letter in inputSplit) {
+            println(letter)
+        }
     }
 
     // ---------------------- EXERCISE 3
     // Create a function that takes an integer and returns the sum of its digits.
     // For example if input is 45 then output should be 9 (4+5)
     fun sumDigits(number: Int): Int {
-        // Your code here
-        return 0
+        return number.toString().map { it.toString().toInt() }.sum() // ???
     }
+
+
 
     // ---------------------- EXERCISE 4
     // Create a function that takes a list of integers and returns a new list with only the odd numbers.
